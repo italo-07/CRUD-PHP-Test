@@ -1,0 +1,95 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 03/07/2016, 20:43:32
+    Author     : ITALO-PC
+*/
+
+#main {
+    margin-top: 50px;
+}
+
+#rodape{    
+    background: #58383b;
+    position: absolute;
+    bottom: 0; 
+    width:100%;
+    margin-top: 10px;
+    padding: 25px 0;
+    text-align: center;
+}
+
+#rodape span{
+    color: #fff;
+}
+
+#teste{
+    border: 2px solid #58383b;
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    
+    display: inline-block;
+}
+#teste img{
+    position: relative;
+    float: left;
+    width: 150px;
+    height: 170px;
+    padding-bottom: 15px;
+}
+#teste p{
+    font-family: 'Roboto', 'Lato';
+    font-size: 18px;
+    color: #ff0000;
+    text-align: left;
+}
+#teste span{
+    font-weight: bold;
+    color: #58383b;
+}
+#titul{
+    text-align: center;
+    display: inline-block;
+}
+#teste a{
+    display: inline-block;
+    color: #ff0000;
+    padding-top: 15px;
+}
+#icon1{
+    position: absolute;
+    padding-left: 180px;
+}
+#icon2{
+    padding-left: 220px;
+    margin-right: 20px;
+}
+
+#cat{
+    border: 2px solid #58383b;
+    border-radius: 10px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    width:13%;
+    float: left;
+    display: inline-block;
+}
+
+#cat p{
+    font-family: 'Roboto', 'Lato';
+    font-size: 18px;
+    color: #ff0000;
+}
+#cat i{
+    position: relative;
+    margin-left: 85px;
+    color: #58383b;
+}
+#cat span{
+    font-weight: bold;
+    color: #58383b;
+}
