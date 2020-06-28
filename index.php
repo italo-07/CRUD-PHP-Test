@@ -17,15 +17,7 @@
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container-fluid">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="../pages/home.jsp"><i class="fa fa-book"></i> Sistema CRUD</a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <!--<li><a href="../pages/home.jsp">Inicio</a></li>
-                        <li><a href="../pages/cadBook.jsp">Cadastra - Livros</a></li>
-                        <li><a href="../pages/cadCategory.jsp">Cadastra - Categorias</a></li>
-                        <li><a href="../logout">Logout</a></li>-->
-                    </ul>
+                    <a class="navbar-brand" href="#"><i class="fa fa-book"></i> Sistema CRUD</a>
                 </div>
             </div>
         </nav>
@@ -120,34 +112,42 @@
 
         ?>
 
-        <div class="row justify-content-center">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Preco</th>
-                        <th>Descricao</th>
-                        <th>Imagem</th>
-                        <th colspan="2">Ação</th>
-                    </tr>
-                </thead>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="form-group col-md-3"></div>
+                <div class="form-group col-md-6"> 
+                    
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Nome</th>
+                                    <th>Preço</th>
+                                    <th>Descrição</th>
+                                    <th>Imagem</th>
+                                    <th colspan="2">Ação</th>
+                                </tr>
+                            </thead>
 
-                <?php 
-                    while($row = $result->fetch_assoc()):    ?>
+                            <?php 
+                                while($row = $result->fetch_assoc()):    ?>
 
-                    <tr>
-                        <td><?php echo $row['nome']; ?></td>
-                        <td><?php echo $row['preco']; ?></td>
-                        <td><?php echo $row['descricao']; ?></td>
-                        <td><?php echo $row['imagem']; ?></td>
-                        <td>
-                            <a href="index.php?edit=<?php echo $row['id']; ?>" class="btn btn-info">Editar</a>
-                            <a href="process.php?delete=<?php echo $row['id']; ?>" class="btn btn-danger">Excluir</a>
-                        </td>
-                    </tr>
-                <?php endwhile; ?>
+                                <tr>
+                                    <td><?php echo $row['nome']; ?></td>
+                                    <td><?php echo $row['preco']; ?></td>
+                                    <td><?php echo $row['descricao']; ?></td>
+                                    <td><img src="<?php echo $row['imagem']; ?>" width="50" height="60"></td>
+                                    <td>
+                                        <a href="index.php?edit=<?php echo $row['id']; ?>" class="btn btn-info">Editar</a>
+                                        <a href="process.php?delete=<?php echo $row['id']; ?>" class="btn btn-danger">Excluir</a>
+                                    </td>
+                                </tr>
+                            <?php endwhile; ?>
 
-            </table>
+                        </table>
+                   
+                </div>
+                <div class="form-group col-md-3"></div>
+            </div>
         </div>
 
         <?php
